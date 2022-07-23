@@ -8,7 +8,7 @@ Summary:    Cross-platform Veloren launcher
 License:    GPLv3+
 URL:        https://github.com/veloren/Airshipper
 Source0:    https://gitlab.com/veloren/airshipper/-/archive/v%{version}/airshipper-v%{version}.tar.bz2
-Souerce1:   veloren.png
+Source1:    veloren.png
 
 BuildRequires: git-core
 BuildRequires: python
