@@ -8,6 +8,7 @@ Summary:    Cross-platform Veloren launcher
 License:    GPLv3+
 URL:        https://github.com/veloren/Airshipper
 Source0:    https://gitlab.com/veloren/airshipper/-/archive/v%{version}/airshipper-v%{version}.tar.bz2
+Souerce1:   veloren.png
 
 BuildRequires: git-core
 BuildRequires: python
@@ -42,8 +43,25 @@ cargo build --release --bin %{name}
 %install
 install -Dpm0755 target/release/%{name} -t %{buildroot}/%{_bindir}
 
+# .desktop
+install -dm 0755 %{buildroot}%{_datadir}/applications/
+cat > %{buildroot}%{_datadir}/applications/%{name}.desktop << EOF
+[Desktop Entry]
+Name=airshipper
+Comment=Veloren game launcher
+Exec=%{name}
+Icon=veloren.png
+Terminal=false
+Type=Application
+Categories=Application;Games;Launcher;
+X-Vendor=OpenMandriva
+EOF
+
+install -m644 -D %{SOURCE1} %{buildroot}%{_iconsdir}
 
 %files
 %license LICENSE
 %doc CHANGELOG.md
 %{_bindir}/%{name}
+%{_iconsdir}/veloren.png
+%{_datadir}/applications/%{name}.desktop
