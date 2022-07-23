@@ -36,7 +36,7 @@ curl https://sh.rustup.rs -sSf | sh -s -- \
 
 
 %build
-$HOME/.cargo/bin/cargo build --release --bin %{name}
+cargo build --release --bin %{name}
 
 
 %install
