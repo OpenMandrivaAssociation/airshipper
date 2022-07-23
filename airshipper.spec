@@ -27,7 +27,7 @@ Features
 
 
 %prep
-%autosetup -p1
+%autosetup -n %{name}-v%{version} -p1
 
 curl https://sh.rustup.rs -sSf | sh -s -- \
     --profile minimal \
