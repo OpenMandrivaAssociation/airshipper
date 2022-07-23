@@ -53,7 +53,7 @@ Exec=%{name}
 Icon=veloren.png
 Terminal=false
 Type=Application
-Categories=Application;Games;Launcher;
+Categories=Application;Game;Launcher;
 X-Vendor=OpenMandriva
 EOF
 
