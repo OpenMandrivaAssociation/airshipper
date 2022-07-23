@@ -2,9 +2,9 @@
 
 Name:       airshipper
 Version:    0.7.0
-Release:    1%{?dist}
+Release:    1
 Summary:    Cross-platform Veloren launcher
-
+Group:      Games/Launcher
 License:    GPLv3+
 URL:        https://github.com/veloren/Airshipper
 Source0:    https://gitlab.com/veloren/airshipper/-/archive/v%{version}/airshipper-v%{version}.tar.bz2
@@ -57,7 +57,7 @@ Categories=Application;Games;Launcher;
 X-Vendor=OpenMandriva
 EOF
 
-install -m644 -D %{SOURCE1} %{buildroot}%{_iconsdir}
+install -m644 -D %{SOURCE1} %{buildroot}%{_iconsdir}/veloren.png
 
 %files
 %license LICENSE
