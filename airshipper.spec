@@ -30,7 +30,7 @@ Features
 
 
 %prep
-%autosetup -n %{name}-v%{version} -a1
+%autosetup -n %{name}-v%{version} -a2
 install -D -m 644 %{SOURCE3} .cargo/config
 
 curl https://sh.rustup.rs -sSf | sh -s -- \
