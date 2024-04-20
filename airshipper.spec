@@ -16,6 +16,7 @@ BuildRequires: git-core
 BuildRequires: python
 BuildRequires: rust
 BuildRequires: cargo
+BuildRequires: pkgconfig(fontconfig)
 BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(xkbcommon-x11)
