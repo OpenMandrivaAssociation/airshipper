@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:       airshipper
-Version:    0.10.0
+Version:    0.11.0
 Release:    1
 Summary:    Cross-platform Veloren launcher
 Group:      Games/Launcher
@@ -9,6 +9,8 @@ License:    GPLv3+
 URL:        https://github.com/veloren/Airshipper
 Source0:    https://gitlab.com/veloren/airshipper/-/archive/v%{version}/airshipper-v%{version}.tar.bz2
 Source1:    veloren.png
+Source2:    vendor.tar.xz
+Source3:    cargo_config
 
 BuildRequires: git-core
 BuildRequires: python
@@ -28,7 +30,8 @@ Features
 
 
 %prep
-%autosetup -n %{name}-v%{version} -p1
+%autosetup -n %{name}-v%{version} -a1
+install -D -m 644 %{SOURCE3} .cargo/config
 
 curl https://sh.rustup.rs -sSf | sh -s -- \
     --profile minimal \
