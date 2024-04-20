@@ -1,0 +1,10 @@
+[source.crates-io]
+replace-with = "vendored-sources"
+
+[source."git+https://github.com/XAMPPRocky/octocrab?rev=c78edcd87fa5edcd5a6d0d0878b2a8d020802c40"]
+git = "https://github.com/XAMPPRocky/octocrab"
+rev = "c78edcd87fa5edcd5a6d0d0878b2a8d020802c40"
+replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "vendor"
