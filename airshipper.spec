@@ -35,13 +35,14 @@ Features
 %autosetup -n %{name}-v%{version} -a2
 install -D -m 644 %{SOURCE3} .cargo/config
 
-curl https://sh.rustup.rs -sSf | sh -s -- \
-    --profile minimal \
-    --default-toolchain nightly -y \
-    %{nil}
+#curl https://sh.rustup.rs -sSf | sh -s -- \
+#    --profile minimal \
+#    --default-toolchain nightly -y \
+#    %{nil}
 
 
 %build
+export RUSTC_BOOTSTRAP=1
 cargo build --release --bin %{name}
 
 
