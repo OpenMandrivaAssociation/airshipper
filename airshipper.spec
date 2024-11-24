@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:       airshipper
-Version:    0.14.0
+Version:    0.15.0
 Release:    1
 Summary:    Cross-platform Veloren launcher
 Group:      Games/Launcher
